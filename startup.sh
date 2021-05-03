@@ -17,10 +17,10 @@ export PATH=/home/jovyan/.local/bin:$PATH
 
 python /get_notebook.py
 
-#if [ ! -f /import/ipython_galaxy_notebook.ipynb ]; then
-#    cp /home/$NB_USER/notebook.ipynb /import/ipython_galaxy_notebook.ipynb
-#    chown $NB_USER /import/ipython_galaxy_notebook.ipynb
-#fi
+if [ ! -f /import/ipython_galaxy_notebook.ipynb ]; then
+    cp /home/$NB_USER/notebook.ipynb /import/ipython_galaxy_notebook.ipynb
+    chown $NB_USER /import/ipython_galaxy_notebook.ipynb
+fi
 
 jupyter trust /import/ipython_galaxy_notebook.ipynb
 ##/monitor_traffic.sh &
